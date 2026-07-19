@@ -18,3 +18,4 @@ A frontend Student Management System built using Next.js.
 - Tailwind CSS
 - JavaScript
 - LocalStorage
+This is updated file.
