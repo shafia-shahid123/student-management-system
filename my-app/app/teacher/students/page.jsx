@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
 import { students } from "@/data/students";
@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 
-export default function TeacherStudents() {
+function TeacherStudents() {
 
   const router = useRouter();
 
@@ -461,4 +461,11 @@ View Profile
 
   );
 
+}
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TeacherStudents />
+    </Suspense>
+  );
 }
